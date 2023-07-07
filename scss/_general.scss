@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+img {
+    display: block;
+}
+body  {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    font-family: var(--site-font-family);
+    overflow-x: hidden;
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 400;
+    background-color: var(--main-bg-color);
+}
+.site-main {
+    flex-grow: 1;
+}

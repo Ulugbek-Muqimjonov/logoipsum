@@ -1,0 +1,75 @@
+@use "../mixins";
+.footer {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background-color: #211f25;
+    &__top {
+        padding-bottom: 40px;
+        border-bottom: 1px solid #fff;
+    }
+    &__list-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__list {
+        @include mixins.unstyled-list($col:50px,$row:14px);
+        flex-wrap: wrap;
+        flex-direction:row;
+        margin-top: 31px;
+        margin-bottom: 30px;
+        text-align: left;
+    }
+    &__item {
+        width: 84px;
+    }
+    &__item--order {
+        order: 1;
+    }
+    &__link {
+        @include mixins.link;
+        color:#fff;
+        text-align: left;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    &__top-link {
+        @include mixins.link;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+    &__bottom {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 80px;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 20px;
+    }
+    &__bottom-list {
+        @include mixins.unstyled-list();
+        @include mixins.display($direc:row,$col:24px,$x:flex-start);
+    }
+    &__bottom-link {
+        @include mixins.link;
+        color: #fff;
+        font-size: 11px;
+        font-weight: 400;
+        text-decoration:underline;
+    }
+    &__span {
+        margin: 0 auto;
+        color: #fff;
+        font-family:"Roboto";
+        font-size: 14px;
+        line-height: 150%;
+    }
+}
+@media only screen and (min-width:560px) {
+    .footer {
+        &__span {
+            display: contents;
+        }
+    }
+}

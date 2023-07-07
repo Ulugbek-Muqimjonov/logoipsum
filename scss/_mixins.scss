@@ -1,0 +1,43 @@
+@mixin unstyled-list($display:flex,$col:0,$row:0) {
+    display:$display;
+    column-gap:$col;
+    row-gap:$row;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+@mixin display($direc:column,$x:space-between,$y:center,$col:0,$row:0) {
+    display: flex;
+    flex-direction:$direc;
+    justify-content:$x;
+    align-items: $y;
+    column-gap: $col;
+    row-gap: $row;
+}
+@mixin bacground-img($w,$h,$img,$x,$y) {
+    width: $w;
+    height:$h;
+    background-image: url($img);
+    background-position: $x $y;
+    background-repeat: no-repeat;
+    
+}
+@mixin psevdo-el($w,$h,$img) {
+    display: inline-block;
+    width: $w;
+    height: $h;
+    background-image: url($img);
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "";
+}
+@mixin link {
+    display: inline-block;
+    text-decoration: none;
+    color: #211f25;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24.80px;
+    letter-spacing: 0.32px;
+    word-wrap: break-word;
+}

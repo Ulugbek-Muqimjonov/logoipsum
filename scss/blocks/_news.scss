@@ -1,0 +1,129 @@
+@use "../mixins";
+.news {
+    padding-top: 80px;
+    padding-bottom: 103px;
+    text-align: center;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &__inner {
+        max-width: 442px;
+        width: 100%;
+    }
+    &__more {
+        @include mixins.link;
+        color: #ff007a;
+        min-width: 115px;
+        padding: 16px 28px;
+        border: 1px solid #ff007a;
+        border-radius: 32px;
+        display: none;
+        transition: background-color 0.5s ease,color 0.5s ease;
+        &:hover {
+          background-color: #ff007a;
+          color: #fff;
+        }
+    }
+    &__title {
+        margin: 0;
+        color: #211f25;
+        font-size: 36px;
+        line-height: normal;
+        letter-spacing: -0.36px;
+    }
+    &__desc {
+        margin: 0;
+        color: #3d3a41;
+        font-size: 17.778px;
+    }
+    &__list {
+        @include mixins.unstyled-list($row:30px);
+        flex-direction: column;
+    }
+    &__item {
+        @include mixins.display($x:flex-start);
+        padding-bottom: 24px;
+    }
+    &__item-wrapper {
+        padding-right: 63px;
+        padding-left: 21px;
+        text-align: left;
+    }
+    &__innerdiv {
+        @include mixins.display($direc:row,$x:flex-start,$y:center,$col:16px)
+    }
+    &__img {
+        margin-bottom: 23px;
+    }
+    &__span {
+        width: 95px;
+        padding: 4px 7px;
+        background-color: #f4f4f4;
+        font-size:14px;
+        font-weight: 600;
+    }
+    &__time {
+        font-weight: 600;
+        font-size: 14px;
+    }
+    &__item-title {
+        margin: 0;
+        margin-bottom: 8px;
+        font-size: 23.415px;
+        font-weight: 600;
+        line-height: 140%;
+    }
+    &__item-desc {
+        margin: 0;
+        margin-bottom: 23px;
+        color: #3d3a41;
+        font-family: "Roboto";
+        font-size: 15.61px;
+        line-height: 150%;
+    }
+    &__link {
+        @include mixins.link;
+        @include mixins.display($direc:row,$x:flex-start,$col:8px);
+        color: #ff007a;
+        &::after {
+            @include mixins.psevdo-el(15px,15px,"../../images/arr.svg");
+            
+        }
+    }
+}
+
+@media only screen and (min-width:1280px) {
+    .news {
+        background-color: #f4fbff;
+        &__list {
+            flex-direction: row;
+        }
+        &__item {
+            max-width: 405px;
+            width: 100%;
+            padding: 23px;
+            border-radius: 8px;
+            &:hover {
+                background-color: #fff;
+                box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.19);
+                -webkit-box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.19);
+                -moz-box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.19);
+            }
+        }
+        &__img {
+            width: 100%;
+        }
+        &__title {
+            margin-bottom: 16px;
+            text-align: left;
+        }
+        &__desc {
+            margin-bottom: 80px;
+        }
+        &__more {
+            display: block;
+        }
+    }
+}

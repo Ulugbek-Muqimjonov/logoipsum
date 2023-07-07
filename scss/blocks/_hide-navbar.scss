@@ -1,0 +1,34 @@
+@use "../mixins";
+.hide-navbar {
+    position:absolute;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    background-color:#7e35eb;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 93px;
+        padding-top: 55px;
+    }
+    &__list {
+        @include mixins.unstyled-list($row:40px);
+        flex-direction: column;
+        align-items: center;
+    }
+    &__link {
+        @include mixins.link;
+        color: #fff;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__btn {
+        border-radius: 50%;
+        background: none;
+        border: none;
+        @include mixins.bacground-img(26px,26px,"../../images/exit.svg",center,center) ;
+    }
+
+}

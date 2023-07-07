@@ -1,0 +1,192 @@
+@use "../mixins";
+.site-header {
+    &__list {
+        @include mixins.unstyled-list($col:40px);
+    }
+    &__link {
+        @include mixins.link;
+        color: #fff;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        display: none;
+        margin-right: 30px;
+        margin-left: auto;
+    }
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;    
+        padding-bottom: 80px;
+    }
+}
+.site-main {
+    background-image: url("../../images/logoipsum-mobile-light.png");
+    background-repeat: no-repeat; 
+    background-position-x:calc(50%); 
+    padding-top: 56px;
+    &__second {
+        padding-bottom: 80px;
+    }   
+    &__btn {
+        order: -2;
+        width: 32px;
+        height: 32px;
+        background-color: transparent;
+        border: none;
+        border-radius: 50%;
+        background-color: #8973ff;
+        @include mixins.bacground-img(24px,24px,"../../images/btnformob.svg",center,center);
+    }
+    &__burger-btn {
+        width: 26px;
+        height: 26px;
+        background-color: transparent;
+        border: none;
+        background-repeat: no-repeat;
+        background-image: url("../../images/burgermenu.svg");
+    }
+    &__second-wrapper {
+        max-width: 737px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    &__second-title {
+        margin: 0;
+        margin-bottom: 10px;
+        text-align: center;
+        color:#fff;
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 42px;
+        word-wrap: break-word
+    }
+    &__second-desc {
+        margin: 0;
+        margin-bottom: 80px;
+        text-align: center;
+        color:#fff;
+        font-size: 14px;
+        letter-spacing: 0.16px;
+        word-wrap: break-word;
+    }
+    &__second-link-wrap {
+        @include mixins.display($x:flex-start,$y:center,$row:20px);
+    }
+    &__second-link {
+        @include mixins.display($direc:row,$x:center,$y:center,$col:16px);
+        height: 60px;
+        width: 187px;
+        padding: 16px 28px;
+        border-radius: 32px;
+        border:1px solid #fff;
+        text-decoration: none;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 24.80px;
+        letter-spacing: 0.16px;
+        word-wrap: break-word;
+    }
+    &__second-link:first-child::after {
+        @include mixins.psevdo-el(36px,36px,"../../images/play.svg");
+        background-position: center;
+    }
+    &__second-link:last-child {
+        margin-bottom: 33px;
+        background-color: red;
+        border-color:transparent ;
+    }
+    &__mac {
+        margin: 0 auto;
+        width: 280px;
+        height: auto;
+        object-fit: cover;
+    }
+    
+}
+@media only screen and (min-width:375px) {
+    .site-main {
+        background-size: 100% 800px;
+        &__second-title {
+            font-size: 36px;
+        }
+        &__second-link-wrap {
+            margin-bottom: 80px;
+        }
+        &__second-desc {
+            font-size: 16px;
+        }
+        &__mac {
+            width: 300px;
+            height:auto;
+        }
+    }
+}
+@media only screen and (min-width:560px) {
+    .site-main {
+        background-size: 100% 800px;
+        &__second-title {
+            font-size:40px;
+        }
+        &__second-link-wrap {
+            margin-bottom: 80px;
+        }
+        &__second-desc {
+            font-size: 17px;
+        }
+        &__mac {
+            width:500px;
+            height:auto;
+        }
+    }
+}
+@media only screen and (min-width:666px) {
+    .site-main {
+        background-image:url("../../images/logoipsum-dekstop-light.png");
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-size:auto;
+        object-fit: cover;
+        &__second-link-wrap {
+            flex-direction: row;
+            column-gap: 33px;
+            justify-content: center;
+            margin-bottom: 147px;
+        }
+        &__second-link:last-child {
+            margin: 0;
+        }
+        &__burger-btn {
+            display: none;
+        }
+        &__btn {
+            order: 1;
+        }
+    }
+    .site-header {
+        &__nav {
+            display: block;
+        }
+    }
+}
+
+.active .hide-navbar {
+    display: block;
+}
+.dark .site-main {
+    background-image:url("../../images/logoipsum-dekstop-dark.png");
+    object-fit: cover;
+}
+.bg {
+ background-color: #000;
+ color: #fff;
+}
+.h {
+    color: #fff;
+}
