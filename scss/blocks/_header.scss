@@ -8,6 +8,7 @@
         color: #fff;
         &:hover {
             text-decoration: underline;
+            opacity: 0.5;
         }
     }
     &__nav {
@@ -31,7 +32,7 @@
     background-position-x:calc(50%); 
     padding-top: 56px;
     &__second {
-        padding-bottom: 80px;
+        padding-bottom:80px;
     }   
     &__btn {
         order: -2;
@@ -52,7 +53,7 @@
         background-image: url("../../images/burgermenu.svg");
     }
     &__second-wrapper {
-        max-width: 737px;
+        max-width: 705px;
         width: 100%;
         margin: 0 auto;
     }
@@ -132,7 +133,7 @@
     .site-main {
         background-size: 100% 800px;
         &__second-title {
-            font-size:40px;
+            font-size:48px;
         }
         &__second-link-wrap {
             margin-bottom: 80px;
@@ -153,8 +154,11 @@
         background-repeat: no-repeat;
         background-size:auto;
         object-fit: cover;
+        &__second {
+            padding-bottom: 200px;
+        }
         &__second-link-wrap {
-            flex-direction: row;
+            flex-direction: row-reverse;
             column-gap: 33px;
             justify-content: center;
             margin-bottom: 147px;

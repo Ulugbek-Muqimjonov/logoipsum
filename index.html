@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
     <title>Logoipsum</title>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    // Add the new slick-theme.css if you want the default styling
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 </head>
 <body>
     <!-- site header begin -->
@@ -88,8 +91,10 @@
         <section class="site-main__our-solutions our-solutions">
             <div class="container">
                 <div class="our-solutions__wrapper">
-                    <h2 class="our-solutions__title title">Software Solutions That Fit Your Needs</h2>
-                    <p class="our-solutions__desc">The features to boost your productivity</p>
+                    <div class="our-solutions__inner">
+                        <h2 class="our-solutions__title title">Software Solutions That Fit Your Needs</h2>
+                        <p class="our-solutions__desc">The features to boost your productivity</p>
+                    </div>
                     <ul class="our-solutions__list">
                         <li class="our-solutions__item">
                             <img src="./images/our-solutions1.svg" width="280" alt="" class="our-solutions__item-img">
@@ -136,7 +141,7 @@
                 <div class="carusel__inner">
                     <h3 class="carusel__title title">Customer testi monials</h3>
                     <p class="carusel__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <ul class="carusel__wrapper">
+                    <!-- <ul class="carusel__wrapper">
                         <li class="carusel__cards">
                             <blockquote class="carusel__blockquite" cite="BrooklynSimmons">
                                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."
@@ -164,7 +169,9 @@
                                 <p class="carusel__user-location">Bank of America</p>
                             </div>
                         </li>
-                    </ul>
+                    </ul> -->
+                    
+                    
                 </div>
             </div>
         </section>
@@ -329,6 +336,7 @@
                             <input class="form__input" type="email" name="user__email:" aria-label="enter your email" placeholder="Enter your email" required autocomplete="off">
                             <button class="form__btn" type="submit">Sign Up</button>
                         </form>
+                        <p class="footer__top-desc">By subscribing you agree to with our Privacy Policy</p>
                     </div>
                 </div>
             </div>
@@ -351,47 +359,17 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
     
     <script>
-        const swiperEl = document.querySelector('swiper-container');
-        const swiper = swiperEl.swiper;
-        
-        var appendNumber = 4;
-        var prependNumber = 1;
-        document
-        .querySelector(".prepend-2-slides")
-        .addEventListener("click", function (e) {
-            e.preventDefault();
-            swiper.prependSlide([
-            '<carusel>Slide ' + --prependNumber + "</carusel>",
-            '<carusel>Slide ' + --prependNumber + "</carusel>",
-            ]);
-        });
-        document
-        .querySelector(".prepend-slide")
-        .addEventListener("click", function (e) {
-            e.preventDefault();
-            swiper.prependSlide(
-            '<carusel>Slide ' + --prependNumber + "</carusel>"
-            );
-        });
-        document
-        .querySelector(".append-slide")
-        .addEventListener("click", function (e) {
-            e.preventDefault();
-            swiper.appendSlide(
-            '<carusel>Slide ' + ++appendNumber + "</carusel>"
-            );
-        });
-        document
-        .querySelector(".append-2-slides")
-        .addEventListener("click", function (e) {
-            e.preventDefault();
-            swiper.appendSlide([
-            '<carusel>Slide ' + ++appendNumber + "</carusel>",
-            '<carusel>Slide ' + ++appendNumber + "</carusel>",
-            ]);
+        $('.autoplay').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
         });
     </script>
     <script src="./javascript/main.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
 </body>
 
 </html>

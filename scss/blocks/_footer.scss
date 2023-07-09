@@ -39,6 +39,15 @@
         color: #fff;
         margin-bottom: 10px;
     }
+    &__top-desc {
+        margin-top: 20px;
+        margin-bottom: 0;
+        color: #fff;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.16px;
+    }
     &__bottom {
         display: flex;
         flex-wrap: wrap;

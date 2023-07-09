@@ -141,6 +141,11 @@
 }
 @media only screen and (min-width:1280px) {
   .our-solutions {
+    &__inner {
+      width: 620px;
+      margin: 0 auto;
+      margin-bottom: 16px;
+    }
     &__list {
       flex-direction: row;
       justify-content: space-between;
@@ -152,8 +157,27 @@
     &__card-link {
       margin: 0;
     }
+    &__title {
+      font-size: 48px;
+      line-height: 120%;
+      letter-spacing: -0.48px;
+    }
+    &__desc {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 155%;
+      letter-spacing: 0.16px;
+    }
+    &__item-title {
+      margin-bottom: 16px;
+    }
+    &__card-title {
+      font-size: 48px;
+    }
     &__card-desc {
       text-align: left;
+      margin-bottom: 80px;
     }
     &__second-list {
       row-gap: 100px;
